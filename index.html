@@ -14,15 +14,15 @@ body {
     background: #f4f4f4;
 }
 
-/* ===== HLAVIČKA S TVOJÍM BETÓNOM ===== */
+/* ===== HLAVIČKA S TMAVÝM BETÓNOM ===== */
 header {
     background:
-        linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
-        url("beton.jpg");
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("IMG_9838.jpeg");
     background-size: cover;
     background-position: center;
     text-align: center;
-    padding: 60px 20px 50px 20px;
+    padding: 70px 20px 60px 20px;
 }
 
 .header-content {
@@ -35,16 +35,18 @@ header h1 {
     font-size: 48px;
     font-family: 'Cinzel', serif;
     letter-spacing: 4px;
-    color: #111;
+    color: #ffffff;
+    text-shadow: 0 4px 10px rgba(0,0,0,0.6);
 }
 
 header p {
     margin: 15px 0 0 0;
     font-size: 18px;
-    color: #333;
+    color: #f0f0f0;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.6);
 }
 
-/* ===== 3D ORANŽOVÁ LIŠTA ===== */
+/* ===== 3D ORANŽOVÁ LIŠTA (NEMENENÁ) ===== */
 nav {
     position: relative;
     background: linear-gradient(to bottom, #ff7a00, #e86400);
@@ -78,7 +80,7 @@ nav::before {
 .nav-item {
     color: white;
     font-weight: 600;
-    font-size: 20px; /* zväčšené písmo */
+    font-size: 20px;
     text-shadow: 0 1px 2px rgba(0,0,0,0.35);
 }
 
@@ -93,7 +95,7 @@ nav::before {
 @media (max-width: 768px) {
 
     header {
-        padding: 45px 15px 35px 15px;
+        padding: 55px 15px 45px 15px;
     }
 
     header h1 {
