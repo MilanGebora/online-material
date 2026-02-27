@@ -3,130 +3,151 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>ONLINE MATERIÁL</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Cinzel:wght@700&display=swap" rel="stylesheet">
 
 <style>
-
-body{
-    margin:0;
-    font-family: Arial, sans-serif;
-    background:#f2f2f2;
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #f4f4f4;
 }
 
-/* ===== HLAVIČKA ===== */
-
-header{
+/* ===== HLAVIČKA S TVOJÍM BETÓNOM ===== */
+header {
     background:
-        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-        url("IMG_9838.jpeg");
-    background-size:cover;
-    background-position:center;
-    text-align:center;
-    padding:80px 20px 70px 20px;
+        linear-gradient(rgba(255,255,255,0.75), rgba(255,255,255,0.75)),
+        url("beton.jpg");
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    padding: 60px 20px 50px 20px;
 }
 
-header h1{
-    margin:0;
-    font-family:'Playfair Display', serif;
-    font-size:44px;
-    letter-spacing:2px;
-    color:white;
+.header-content {
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-header p{
-    margin-top:18px;
-    font-size:18px;
-    color:#f0f0f0;
+header h1 {
+    margin: 0;
+    font-size: 48px;
+    font-family: 'Cinzel', serif;
+    letter-spacing: 4px;
+    color: #111;
 }
 
-/* ===== ORANŽOVÁ LIŠTA ===== */
-
-nav{
-    background: linear-gradient(145deg,#ff7a00,#e85c00);
-    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+header p {
+    margin: 15px 0 0 0;
+    font-size: 18px;
+    color: #333;
 }
 
-nav ul{
-    margin:0;
-    padding:0;
-    list-style:none;
-    display:flex;
-    justify-content:center;
-    align-items:center;
+/* ===== 3D ORANŽOVÁ LIŠTA ===== */
+nav {
+    position: relative;
+    background: linear-gradient(to bottom, #ff7a00, #e86400);
+    height: 75px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 
+        inset 0 3px 6px rgba(255,255,255,0.25),
+        inset 0 -5px 8px rgba(0,0,0,0.25),
+        0 8px 16px rgba(0,0,0,0.15);
 }
 
-nav li{
-    position:relative;
+nav::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 0;
+    width: 100%;
+    height: 15px;
+    background: radial-gradient(ellipse at center, rgba(255,255,255,0.3), transparent 70%);
+    pointer-events: none;
 }
 
-nav a{
-    display:block;
-    padding:22px 45px;
-    text-decoration:none;
-    color:white;
-    font-weight:bold;
-    font-size:22px;
-    letter-spacing:0.5px;
+.nav-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
 }
 
-/* vertikálne čiary */
-
-nav li:not(:last-child)::after{
-    content:"";
-    position:absolute;
-    right:0;
-    top:50%;
-    transform:translateY(-50%);
-    height:30px;
-    width:2px;
-    background:white;
-    opacity:0.8;
+.nav-item {
+    color: white;
+    font-weight: 600;
+    font-size: 20px; /* zväčšené písmo */
+    text-shadow: 0 1px 2px rgba(0,0,0,0.35);
 }
 
-/* hover */
-
-nav a:hover{
-    background:rgba(255,255,255,0.15);
+.divider {
+    width: 2px;
+    height: 32px;
+    background: rgba(255,255,255,0.9);
+    box-shadow: 0 0 5px rgba(255,255,255,0.5);
 }
 
-/* ===== MOBIL – stále vodorovne ===== */
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
 
-@media (max-width:768px){
-
-    header{
-        padding:60px 15px;
+    header {
+        padding: 45px 15px 35px 15px;
     }
 
-    header h1{
-        font-size:34px;
+    header h1 {
+        font-size: 30px;
+        letter-spacing: 2px;
     }
 
-    nav a{
-        padding:18px 25px;
-        font-size:18px;
+    header p {
+        font-size: 14px;
+    }
+
+    nav {
+        height: 65px;
+    }
+
+    .nav-wrapper {
+        gap: 20px;
+    }
+
+    .nav-item {
+        font-size: 15px;
+    }
+
+    .divider {
+        height: 22px;
     }
 }
 
+main {
+    height: 500px;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <h1>ONLINE MATERIÁL</h1>
-    <p>… pre Vašu stavbu, najlacnejšie a s dovozom</p>
+    <div class="header-content">
+        <h1>ONLINE MATERIÁL</h1>
+        <p>… pre Vašu stavbu, najlacnejšie a s dovozom</p>
+    </div>
 </header>
 
 <nav>
-    <ul>
-        <li><a href="#">Materiál</a></li>
-        <li><a href="#">Online poradenstvo</a></li>
-        <li><a href="#">Kontakt</a></li>
-    </ul>
+    <div class="nav-wrapper">
+        <div class="nav-item">Materiál</div>
+        <div class="divider"></div>
+        <div class="nav-item">Online poradenstvo</div>
+        <div class="divider"></div>
+        <div class="nav-item">Kontakt</div>
+    </div>
 </nav>
+
+<main></main>
 
 </body>
 </html>
