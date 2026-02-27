@@ -6,110 +6,107 @@
 
 <title>ONLINE MATERIÁL</title>
 
-<!-- Elegantný serif font -->
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
 
-body {
-    margin: 0;
+body{
+    margin:0;
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background:#f2f2f2;
 }
 
 /* ===== HLAVIČKA ===== */
 
-header {
-    background-image: 
-        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
+header{
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
         url("IMG_9838.jpeg");
-    background-size: cover;
-    background-position: center;
-    text-align: center;
-    padding: 60px 20px;
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    padding:80px 20px 70px 20px;
 }
 
-header h1 {
-    margin: 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 42px;
-    letter-spacing: 2px;
-    color: #111;
+header h1{
+    margin:0;
+    font-family:'Playfair Display', serif;
+    font-size:44px;
+    letter-spacing:2px;
+    color:white;
 }
 
-header p {
-    margin-top: 15px;
-    font-size: 18px;
-    color: #333;
+header p{
+    margin-top:18px;
+    font-size:18px;
+    color:#f0f0f0;
 }
 
 /* ===== ORANŽOVÁ LIŠTA ===== */
 
-nav {
-    background: linear-gradient(145deg, #ff7a00, #e85c00);
-    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav{
+    background: linear-gradient(145deg,#ff7a00,#e85c00);
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
 }
 
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
+nav ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-nav li {
-    display: flex;
-    align-items: center;
+nav li{
+    position:relative;
 }
 
-nav a {
-    display: block;
-    padding: 22px 40px;
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 20px;
+nav a{
+    display:block;
+    padding:22px 45px;
+    text-decoration:none;
+    color:white;
+    font-weight:bold;
+    font-size:22px;
+    letter-spacing:0.5px;
 }
 
-nav li:not(:last-child)::after {
-    content: "";
-    width: 2px;
-    height: 28px;
-    background: white;
-    opacity: 0.7;
+/* vertikálne čiary */
+
+nav li:not(:last-child)::after{
+    content:"";
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+    height:30px;
+    width:2px;
+    background:white;
+    opacity:0.8;
 }
 
-nav a:hover {
-    background: rgba(255,255,255,0.15);
+/* hover */
+
+nav a:hover{
+    background:rgba(255,255,255,0.15);
 }
 
-/* ===== RESPONSIVE (MOBIL) ===== */
+/* ===== MOBIL – stále vodorovne ===== */
 
-@media (max-width: 768px) {
+@media (max-width:768px){
 
-    header {
-        padding: 45px 15px;
+    header{
+        padding:60px 15px;
     }
 
-    header h1 {
-        font-size: 32px;
+    header h1{
+        font-size:34px;
     }
 
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav li:not(:last-child)::after {
-        display: none;
-    }
-
-    nav a {
-        text-align: center;
-        border-top: 1px solid rgba(255,255,255,0.3);
+    nav a{
+        padding:18px 25px;
+        font-size:18px;
     }
 }
 
